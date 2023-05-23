@@ -34,7 +34,7 @@ function ThankYou() {
       <p className="text-custom-100 text-lg">{"We've added your card details"}</p>
       </div>
      
-      <Link to='/' className="w-full text-white bg-custom-200 h-14 rounded-lg justify-center items-center text-center font-semibold hover:bg-violet-950 transition-colors duration-300 ease-in-out"><button className="mt-4">Continue</button></Link>
+      <Link to='/' className="w-full text-white bg-custom-200 h-14 rounded-lg justify-center items-center text-center font-semibold hover:bg-violet-950 transition-colors duration-700 ease-in-out"><button className="mt-4">Continue</button></Link>
     </motion.div>
   );
 }

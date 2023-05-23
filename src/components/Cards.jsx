@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useFormikContext } from 'formik';
 
 function Cards() {
+  const formik = useFormikContext();
     const firstVariant = {
         hidden: {
           x: "-100vw",
@@ -57,11 +59,11 @@ function Cards() {
 
         <div className="details flex flex-wrap gap-y-6 text-white">
 
-            <h1 className="card-number w-full text-3xl justify-center items-center text-center tracking-widest">0000 0000 0000 0000</h1>
+            <h1 className="card-number w-full text-3xl justify-center items-center text-center tracking-widest">{formik.values.cardNumber}</h1>
             <div className="name-expiry flex justify-between w-full text-lg ">
 
-            <p className="cardholder-name">Jane Appleseed</p>
-            <p className="expiry">00/00</p>
+            <p className="cardholder-name">{formik.values.cardHolderName}</p>
+            <p className="expiry">{formik.values.expiryMonth}/{formik.values.expiryYear}</p>
 
             </div>
            
@@ -75,7 +77,7 @@ function Cards() {
       animate="visible"
       variants={secondVariant} 
       className="w-custom h-60   z-50 absolute top-96 left-60 rounded-2xl bg-cover bg-no-repeat bg-[url(./assets/images/bg-card-back.png)] shadow-lg flex flex-col justify-center ">
-        <p className="w-full ml-80 pl-8 text-white">000</p>
+        <p className="w-full ml-80 pl-8 text-white">{formik.values.cvc}</p>
       </motion.div>
     </>
   );
