@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+.space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+input{
+    @apply h-12 rounded-lg mt-1 pl-4;
+}
